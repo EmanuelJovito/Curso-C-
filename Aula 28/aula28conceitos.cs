@@ -3,7 +3,7 @@
   [EspedificadorAcesso] tipo NOME_DA_PROPIEDADE;
 
   //Métodos 
-  [EspedificadorAcesso] retorno NOME_MÉTODO([arg1,arg2,...]) {
+  [EspedificadorAcesso] retorno NOME_MÉTODO(/*[arg1,arg2,...]*/) {
     //Corpo do método
   }
 }
