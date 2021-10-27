@@ -1,46 +1,48 @@
 using System; 
-public class Jogador {
-  public int energia;
-  public bool vivo;
+static public class Jogador {
+  static public int energia;
+  static public bool vivo;
+  static public string nome;
+
+  static public void iniciar(string n) {
+    energia = 100;
+    vivo = true;
+    nome = n;
+  }
+  static public void info() {
+    Console.WriteLine("Nome jogador...: {0}", nome);
+    Console.WriteLine("Energia jogador: {0}", energia);
+    Console.WriteLine("Status jogador.: {0}\n", vivo);
+  }
+}
+class Inimigo {
+  static public bool alerta;
   public string nome;
 
-  public Jogador() {
-    energia = 100;
-    vivo = true;
-    nome = "Emanuel";
-  }
-  public Jogador(string n) {
-    energia = 100;
-    vivo = true;
-    nome = n;
-  }
-  public Jogador(string n, bool v) {
-    energia = 100;
-    vivo = v;
-    nome = n;
-  }
-  public Jogador(string n, bool v, int e) {
-    energia = e;
-    vivo = v;
+  public Inimigo(string n) {
+    alerta = false;
     nome = n;
   }
 
   public void info() {
-    Console.WriteLine("Nome jogador...: {0}", nome);
-    Console.WriteLine("Energia jogador: {0}", energia);
-    Console.WriteLine("Status jogador.: {0}", vivo);
+    Console.WriteLine(nome);
+    Console.WriteLine(alerta);
+    Console.WriteLine("------------------------------------------------------");
   }
 }
 class Aula31 {
   static void Main() {
-    Jogador j1 = new Jogador();
-    Jogador j2 = new Jogador("Emanue");
-    Jogador j3 = new Jogador("Emanue");
-    Jogador j4 = new Jogador("Emanue");
+    Jogador.iniciar("Emanuel");
+    Jogador.info();
 
-    j1.info();
-    j2.info();
-    j3.info();
-    j4.info();
+    Inimigo i1 = new Inimigo("Doido");
+    Inimigo i2 = new Inimigo("Maluco");
+    Inimigo i3 = new Inimigo("Pirado");
+
+    Inimigo.alerta = true;
+    
+    i1.info();
+    i2.info();
+    i3.info();
   }
 }
