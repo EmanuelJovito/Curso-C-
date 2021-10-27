@@ -34,7 +34,7 @@ public class Jogador {
     Console.WriteLine("Jogador deletado!");
   }
 }
-class Aula28 {
+class Aula30 {
   static void Main() {
     Jogador j1 = new Jogador();
     Jogador j2 = new Jogador("Emanue");
