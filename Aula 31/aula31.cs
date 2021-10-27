@@ -30,11 +30,8 @@ public class Jogador {
     Console.WriteLine("Energia jogador: {0}", energia);
     Console.WriteLine("Status jogador.: {0}", vivo);
   }
-  ~Jogador() {
-    Console.WriteLine("Jogador deletado!");
-  }
 }
-class Aula28 {
+class Aula31 {
   static void Main() {
     Jogador j1 = new Jogador();
     Jogador j2 = new Jogador("Emanue");
