@@ -40,7 +40,7 @@ class Aula31 {
     Inimigo i3 = new Inimigo("Pirado");
 
     Inimigo.alerta = true;
-    
+
     i1.info();
     i2.info();
     i3.info();
